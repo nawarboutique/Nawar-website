@@ -3,89 +3,163 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>NAWAR | Always in Bloom</title>
 
   <style>
     * {
       box-sizing: border-box;
+      margin: 0;
+      padding: 0;
     }
 
     body {
-      margin: 0;
+      min-height: 100vh;
+      background: #FBF4EA;
+      font-family: Georgia, "Times New Roman", serif;
+      color: #7F8D72;
+      overflow: hidden;
+    }
+
+    .page {
+      position: relative;
       min-height: 100vh;
       display: flex;
       align-items: center;
       justify-content: center;
-      background: #F8F4EA;
-      color: #59624E;
-      font-family: Georgia, "Times New Roman", serif;
-      text-align: center;
-    }
-
-    .container {
       padding: 40px 24px;
     }
 
-    .flower {
-      font-size: 52px;
-      margin-bottom: 18px;
+    .content {
+      position: relative;
+      z-index: 2;
+      width: 100%;
+      max-width: 620px;
+      text-align: center;
     }
 
-    h1 {
-      margin: 0;
-      font-size: 54px;
-      letter-spacing: 8px;
-      font-weight: 500;
+    .logo {
+      width: min(430px, 82vw);
+      height: auto;
+      display: block;
+      margin: 0 auto 22px;
     }
 
     .tagline {
-      margin-top: 14px;
-      font-size: 20px;
+      font-size: 22px;
       font-style: italic;
+      letter-spacing: 1px;
+      margin-bottom: 34px;
+      color: #899779;
     }
 
-    .divider {
+    .coming-soon {
+      font-family: Arial, sans-serif;
+      font-size: 13px;
+      letter-spacing: 7px;
+      color: #E792A3;
+      margin-bottom: 28px;
+    }
+
+    .line {
       width: 45px;
       height: 1px;
-      background: #AAB59A;
-      margin: 30px auto;
+      background: #D8CDBE;
+      margin: 0 auto 25px;
     }
 
-    .description {
+    .instagram {
       font-family: Arial, sans-serif;
-      font-size: 15px;
-      letter-spacing: 1.5px;
-      line-height: 1.8;
+      font-size: 13px;
+      letter-spacing: 2px;
+      color: #8CA7C4;
     }
 
-    .coming {
-      margin-top: 32px;
-      font-family: Arial, sans-serif;
-      font-size: 12px;
-      letter-spacing: 4px;
+    .flower {
+      position: absolute;
+      border-radius: 50%;
+      opacity: 0.45;
+    }
+
+    .pink {
+      width: 230px;
+      height: 230px;
+      background: #F1B6C1;
+      top: -120px;
+      left: -100px;
+    }
+
+    .blue {
+      width: 180px;
+      height: 180px;
+      background: #BFD6E7;
+      bottom: -90px;
+      right: -70px;
+    }
+
+    .sage {
+      width: 110px;
+      height: 110px;
+      background: #C7CFB5;
+      top: 12%;
+      right: -55px;
+    }
+
+    .yellow {
+      width: 90px;
+      height: 90px;
+      background: #F5D98A;
+      bottom: 10%;
+      left: -45px;
+    }
+
+    @media (max-width: 600px) {
+      .logo {
+        width: 88vw;
+      }
+
+      .tagline {
+        font-size: 18px;
+      }
+
+      .coming-soon {
+        letter-spacing: 5px;
+      }
     }
   </style>
 </head>
 
 <body>
 
-  <main class="container">
+  <main class="page">
 
-    <div class="flower">🌼</div>
+    <div class="flower pink"></div>
+    <div class="flower blue"></div>
+    <div class="flower sage"></div>
+    <div class="flower yellow"></div>
 
-    <h1>NAWAR</h1>
+    <div class="content">
 
-    <div class="tagline">Always in Bloom</div>
+      <img
+        class="logo"
+        src="Screenshot_20260920_063213_ChatGPT.jpeg"
+        alt="NAWAR"
+      >
 
-    <div class="divider"></div>
+      <div class="tagline">
+        Always in Bloom
+      </div>
 
-    <div class="description">
-      Children's Clothing<br>
-      Doha, Qatar
-    </div>
+      <div class="coming-soon">
+        COMING SOON
+      </div>
 
-    <div class="coming">
-      COMING SOON
+      <div class="line"></div>
+
+      <div class="instagram">
+        @nawarboutiqu
+      </div>
+
     </div>
 
   </main>
