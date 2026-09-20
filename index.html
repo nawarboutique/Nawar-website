@@ -6,6 +6,10 @@
   <title>NAWAR | Always in Bloom</title>
 
   <style>
+    * {
+      box-sizing: border-box;
+    }
+
     html, body {
       margin: 0;
       padding: 0;
@@ -21,45 +25,56 @@
       overflow: hidden;
     }
 
-    img {
-      width: 100%;
+    .hero {
+      position: relative;
+      width: 100vw;
       height: 100vh;
-      object-fit: contain;
+    }
+
+    .hero img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
       display: block;
     }
-.image-container {
-  position: relative;
-  width: min(100vw, 177.78vh);
-  aspect-ratio: 16 / 9;
-}
 
-.image-container img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-}
+    .instagram-link {
+      position: absolute;
+      left: 43%;
+      top: 75%;
+      width: 14%;
+      height: 11%;
+      z-index: 10;
+      cursor: pointer;
+    }
 
-.instagram-link {
-  position: absolute;
-  left: 43%;
-  top: 75%;
-  width: 14%;
-  height: 10%;
-  z-index: 10;
-  cursor: pointer;
-}
-  
-</style>
+    @media (orientation: portrait) {
+      .hero img {
+        object-fit: contain;
+      }
+
+      .hero {
+        width: 100vw;
+        height: 56.25vw;
+      }
+    }
+  </style>
 </head>
 
 <body>
-  <div class="image-container">
+
+  <div class="hero">
     <img src="file12.png" alt="NAWAR - Always in Bloom">
 
-    <a class="instagram-link"
-       href="https://www.instagram.com/nawarboutiq/"
-       target="_blank"
-       aria-label="NAWAR Instagram"></a>
+    <a
+      class="instagram-link"
+      href="https://www.instagram.com/nawarboutiq/"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="NAWAR Instagram">
+    </a>
   </div>
+
 </body>
 </html>
